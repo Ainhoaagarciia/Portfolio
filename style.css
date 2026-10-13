@@ -2100,6 +2100,9 @@ body {
         background-color: #1a2556;
         margin: 0 auto !important;
         padding: 0 !important;
+        -webkit-mask-image: -webkit-radial-gradient(white, black);
+        /* Forzar máscara limpia en Safari móvil */
+        transform: translateZ(0);
     }
 
     /* Pista que contiene los slides del carrusel */
@@ -2119,6 +2122,16 @@ body {
         align-items: center !important;
         justify-content: center !important;
         flex-shrink: 0 !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+    }
+
+    /* Pista y slides heredan el redondeo */
+    .proj-card-seamless .carousel-inner,
+    .proj-card-seamless .carousel-slide {
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: inherit !important;
     }
 
     /* Imagen dentro del slide adaptada correctamente */
@@ -2126,8 +2139,7 @@ body {
         width: 100% !important;
         height: 100% !important;
         object-fit: contain !important;
-        /* Llena toda la caja de forma limpia y estética */
-        border-radius: inherit;
+        border-radius: 12px !important;
         display: block;
     }
 
