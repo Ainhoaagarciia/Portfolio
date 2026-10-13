@@ -26,7 +26,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ANIMACIONES AL HACER SCROLL */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(25px);
@@ -57,7 +56,7 @@ body {
     padding: 0 2.5rem;
 }
 
-/* NAVEGACIÓN */
+/* ── NAVEGACIÓN ── */
 .navbar {
     position: fixed;
     top: 0;
@@ -130,15 +129,15 @@ body {
 }
 
 .nav-contact-link {
-    color: var(--text-main) !important;
+    color: #ffffff !important;
     font-weight: 600 !important;
     display: inline-flex;
     align-items: center;
     gap: 0.3rem;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--burgundy);
     padding: 0.4rem 1rem !important;
     border-radius: 30px;
-    background: var(--bg-card);
+    background: var(--burgundy);
     transition: all 0.3s ease !important;
 }
 
@@ -147,12 +146,12 @@ body {
 }
 
 .nav-contact-link:hover {
-    background: var(--burgundy) !important;
-    color: #fff !important;
-    border-color: var(--burgundy) !important;
+    background: var(--bg-card) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
 }
 
-/* ── Menú Hamburguesa (3 líneas) ── */
+/* ── Menú Hamburguesa  ── */
 .menu-toggle {
     display: none;
     background: transparent;
@@ -330,7 +329,6 @@ body {
     border-radius: 20px;
 }
 
-/* Asegúrate de que los elementos flotantes y la etiqueta vertical tengan un z-index superior (z-index: 2) para que se vean por encima de tu foto */
 .hero-image-box span,
 .hero-image-box .hero-badge-float {
     z-index: 2;
@@ -654,7 +652,7 @@ body {
     font-size: 0.95rem;
 }
 
-/* 03 — FORMACIÓN (Puntos exactamente a la altura de las fechas y espaciado compacto) */
+/* 03 — FORMACIÓN */
 .section-burgundy {
     background: var(--burgundy);
     color: #fff;
@@ -721,7 +719,6 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-/* Posición exacta alineada con la fecha de DAM y Bachillerato */
 .dot-dam {
     top: 9px;
 }
@@ -1428,7 +1425,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    /* Mantiene la proporción del logo dentro del círculo */
 }
 
 .proj-media-box {
@@ -1509,7 +1505,6 @@ body {
     display: flex;
     gap: 8px;
     z-index: 20;
-    /* Por encima de las imágenes y botones */
 }
 
 .carousel-dots .dot {
@@ -1548,7 +1543,6 @@ body {
         padding-bottom: 3rem;
     }
 
-    /* Orden lógico en Tablet: Info (con acordeones) primero, carrusel debajo, y footer al final */
     .proj-card-seamless .proj-info-box {
         order: 1;
     }
@@ -1580,13 +1574,11 @@ body {
    ===================================================== */
 @media (max-width: 1032px) {
 
-    /* Contenedor general */
     .container,
     .nav-content {
         padding: 0 4rem;
     }
 
-    /* ── Navbar ── */
     .navbar {
         padding: 0.85rem 0;
     }
@@ -1595,49 +1587,65 @@ body {
         display: flex !important;
     }
 
-    /* Panel lateral desplegable */
     .nav-links {
         display: flex !important;
         flex-direction: column !important;
         position: fixed !important;
         top: 0 !important;
         right: -100% !important;
-        /* Oculto por defecto fuera de la pantalla */
-        width: 75% !important;
-        max-width: 300px !important;
+        width: 80% !important;
+        max-width: 320px !important;
         height: 100vh !important;
         background: rgba(249, 246, 240, 0.98) !important;
-        backdrop-filter: blur(20px) !important;
+        backdrop-filter: blur(25px) !important;
         border-left: 1px solid var(--border-color) !important;
-        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1) !important;
+        box-shadow: -20px 0 40px rgba(0, 0, 0, 0.08) !important;
         padding: 6rem 2.5rem 3rem 2.5rem !important;
-        gap: 1.5rem !important;
+        gap: 1.25rem !important;
         align-items: flex-start !important;
-        transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1) !important;
+        transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
         z-index: 1000 !important;
     }
 
-    /* Clase que despliega el menú al hacer clic */
     .nav-links.open {
         right: 0 !important;
     }
 
-    /* Estilo de los enlaces dentro del menú desplegable */
     .nav-links a {
         font-size: 1.1rem;
         font-weight: 600;
         color: var(--text-main);
+        width: 100%;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+        transition: color 0.3s ease, transform 0.3s ease;
     }
 
     .nav-links a:hover {
         color: var(--burgundy);
+        transform: translateX(4px);
+    }
+
+    .nav-links a::after {
+        display: none !important;
     }
 
     .nav-contact-link {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-        margin-top: 1rem;
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+        margin-top: 0.5rem !important;
+        background: var(--burgundy) !important;
+        color: #ffffff !important;
+        border: 1px solid var(--burgundy) !important;
+        border-radius: 30px !important;
+        padding: 0.5rem 1rem !important;
+    }
+
+    .nav-contact-link:hover {
+        background: var(--bg-card) !important;
+        color: var(--text-main) !important;
+        border-color: var(--border-color) !important;
     }
 
     /* ── Hero ── */
@@ -1762,12 +1770,10 @@ body {
     .education-left h2 {
         font-size: clamp(1.8rem, 4.5vw, 2.6rem);
         white-space: nowrap;
-        /* Mantiene todo el título y el span en una sola línea */
     }
 
     .education-left p {
         max-width: 100%;
-        /* Asegura que el párrafo ocupe el ancho disponible sin apretarse de más */
         font-size: 0.92rem;
     }
 
@@ -1807,7 +1813,6 @@ body {
         padding-bottom: 3rem;
     }
 
-    /* Orden lógico en Tablet: Info (con acordeones) primero, carrusel debajo, y footer al final */
     .proj-card-seamless .proj-info-box {
         order: 1;
     }
@@ -1842,7 +1847,6 @@ body {
     .achievement-row {
         display: flex;
         flex-direction: row;
-        /* Mantiene la imagen a la derecha del texto */
         align-items: center;
         justify-content: space-between;
         gap: 2rem;
@@ -1850,12 +1854,9 @@ body {
 
     .achievement-thumb {
         width: 260px;
-        /* Ancho controlado para que no ocupe demasiado */
         min-width: 260px;
         height: 160px;
-        /* Altura fija y limpia */
         object-fit: cover;
-        /* Mantiene la proporción sin deformarse */
         border-radius: 8px;
     }
 
@@ -1895,7 +1896,6 @@ body {
    ===================================================== */
 @media (max-width: 480px) {
 
-    /* Contenedor */
     .container,
     .nav-content {
         padding: 0 3rem;
@@ -2005,11 +2005,9 @@ body {
         display: block !important;
         position: relative;
         border-left: 1px solid rgba(255, 255, 255, 0.25);
-        /* O el color de borde que use esta sección */
         min-height: 100%;
     }
 
-    /* Aseguramos que el punto se posicione correctamente en la línea izquierda */
     .trajectory-line-col .editorial-node-dot {
         position: absolute;
         left: -4px;
@@ -2049,7 +2047,7 @@ body {
     }
 
     .dot-bach {
-        top: 225px;
+        top: 230px;
     }
 
     .education-left h2 {
@@ -2072,7 +2070,7 @@ body {
         justify-content: space-between;
     }
 
-    /* ── Proyectos (Solución definitiva carrusel móvil) ── */
+    /* ── Proyectos ── */
     .projects-editorial-list {
         gap: 2.5rem;
     }
@@ -2127,12 +2125,11 @@ body {
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
-        /* Llena toda la caja de forma limpia y estética */
         border-radius: inherit;
         display: block;
     }
 
-    /* Flechas de navegación reposicionadas para no estorbar */
+    /* Flechas de navegación */
     .proj-carousel .carousel-control-prev,
     .proj-carousel .carousel-control-next {
         top: 80% !important;
@@ -2153,7 +2150,7 @@ body {
         right: 0.75rem !important;
     }
 
-    /* Indicadores / Puntos de paginación */
+    /* Indicadores */
     .proj-carousel .carousel-indicators {
         bottom: 8px !important;
         z-index: 5;

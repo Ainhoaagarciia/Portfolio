@@ -1,4 +1,4 @@
-// --- Observador para animaciones al hacer scroll ---
+// --- Animaciones al hacer scroll ---
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -42,7 +42,7 @@ document.querySelectorAll('details.animated-details').forEach((details) => {
     });
 });
 
-// --- Lógica del Carrusel Suave con Indicadores (Dots) ---
+// --- Carrusel Suave con Indicadores (Dots) ---
 function moveCarousel(carouselId, direction) {
     const carousel = document.getElementById(carouselId);
     const slides = carousel.querySelectorAll('.carousel-slide');
@@ -68,11 +68,10 @@ function updateCarousel(carouselId, index) {
     slides[index].classList.add('active');
     dots[index].classList.add('active');
 
-    // Desplazamiento corregido y sin saltos de línea rotos
     track.style.transform = `translateX(-${index * 100}%)`;
 }
 
-// --- Lógica del Menú Hamburguesa (Robusta y Directa) ---
+// --- Menú Hamburguesa ---
 (function () {
     function initMenu() {
         const menuToggle = document.getElementById('menuToggle');
