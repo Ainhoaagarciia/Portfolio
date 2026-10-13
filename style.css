@@ -2111,8 +2111,8 @@ body {
     .proj-card-seamless .carousel-slide img {
         width: 100% !important;
         height: 100% !important;
-        object-fit: cover !important;
-        /* Llena el contenedor sin dejar espacios vacíos a los lados */
+        object-fit: contain !important;
+        background-color: #1a2556 !important;
         border-radius: inherit;
         display: block;
     }
