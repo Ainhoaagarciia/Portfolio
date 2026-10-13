@@ -2072,7 +2072,7 @@ body {
         justify-content: space-between;
     }
 
-    /* ── Proyectos (Solución carrusel centrado y limpio móvil) ── */
+    /* ── Proyectos (Solución definitiva carrusel móvil) ── */
     .projects-editorial-list {
         gap: 2.5rem;
     }
@@ -2088,30 +2088,45 @@ body {
         order: 1;
     }
 
+    /* Caja contenedora principal */
     .proj-card-seamless .proj-media-box,
     .proj-card-seamless .proj-carousel {
         order: 2;
         width: 100% !important;
-        height: 165px !important;
-        /* Reducimos ligeramente la altura para que la captura apaisada encaje mejor */
+        height: 190px !important;
         border-radius: 12px !important;
         overflow: hidden !important;
-        /* Corta perfectamente las esquinas */
         position: relative;
         background-color: #1a2556;
         margin: 0 auto !important;
         padding: 0 !important;
     }
 
-    .proj-card-seamless .carousel-inner {
+    /* Pista que contiene los slides del carrusel */
+    .proj-card-seamless .carousel-track {
+        display: flex !important;
         width: 100% !important;
         height: 100% !important;
+        transition: transform 0.4s ease-in-out !important;
     }
 
+    /* Cada slide individual del carrusel */
+    .proj-card-seamless .carousel-slide {
+        min-width: 100% !important;
+        width: 100% !important;
+        height: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Imagen dentro del slide adaptada correctamente */
     .proj-card-seamless .carousel-slide img {
         width: 100% !important;
         height: 100% !important;
-        object-fit: contain !important;
+        object-fit: cover !important;
+        /* Llena toda la caja de forma limpia y estética */
         border-radius: inherit;
         display: block;
     }
