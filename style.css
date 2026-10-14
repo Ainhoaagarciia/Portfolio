@@ -1366,7 +1366,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
     padding-top: 2rem;
     font-size: 0.85rem;
     color: #d6ccc2;
@@ -2149,6 +2148,8 @@ body {
         border-radius: 50% !important;
         color: #fff !important;
         z-index: 10;
+        -webkit-tap-highlight-color: transparent !important;
+        /* Elimina parpadeo táctico en flechas */
     }
 
     .proj-carousel .carousel-control-prev {
@@ -2163,6 +2164,22 @@ body {
     .proj-carousel .carousel-indicators {
         bottom: 8px !important;
         z-index: 5;
+    }
+
+    /* ── Desplegables / Elementos interactivos en Proyectos (si usan details/summary o botones) ── */
+    .proj-card-seamless details,
+    .proj-card-seamless summary,
+    .proj-card-seamless button,
+    .proj-card-seamless .proj-dropdown {
+        -webkit-tap-highlight-color: transparent !important;
+        outline: none !important;
+    }
+
+    .proj-card-seamless details:focus,
+    .proj-card-seamless summary:focus,
+    .proj-card-seamless button:focus {
+        outline: none !important;
+        box-shadow: none !important;
     }
 
     .proj-card-seamless .proj-footer-row {
@@ -2226,6 +2243,14 @@ body {
         flex-direction: column !important;
         align-items: stretch !important;
         gap: 0rem !important;
+        -webkit-tap-highlight-color: transparent !important;
+        outline: none !important;
+    }
+
+    .lqmm-pill-details:focus,
+    .lqmm-pill-details summary:focus {
+        outline: none !important;
+        box-shadow: none !important;
     }
 
     .lqmm-sum-left {
@@ -2345,7 +2370,7 @@ body {
 
     /* ── Contacto  ── */
     .section-dark {
-        padding: 4rem 0 3rem 0;
+        padding: 2rem 0 3rem 0;
     }
 
     .contact-interactive-box {
