@@ -1533,6 +1533,8 @@ body {
     overflow: hidden;
 }
 
+/* RESPONSIVE  (≤ 1072px) */
+
 @media (max-width: 1072px) {
 
     /* ── Proyectos ── */
@@ -1573,9 +1575,8 @@ body {
     }
 }
 
-/* =====================================================
-   RESPONSIVE — TABLET  (≤ 1032px)
-   ===================================================== */
+/* RESPONSIVE — TABLET  (≤ 1032px) */
+
 @media (max-width: 1032px) {
 
     .container,
@@ -1895,14 +1896,20 @@ body {
     }
 }
 
-/* =====================================================
-   RESPONSIVE — MÓVIL  (≤ 480px)
-   ===================================================== */
+/*  RESPONSIVE — MÓVIL  (≤ 480px)*/
+
 @media (max-width: 480px) {
 
     .container,
     .nav-content {
         padding: 0 3rem;
+    }
+
+    /* ── Menú hamburguesa  ── */
+    .nav-links {
+        overflow-y: auto !important;
+        height: 100vh !important;
+        box-sizing: border-box !important;
     }
 
     /* ── Navbar ── */
@@ -1972,7 +1979,7 @@ body {
         padding: 3rem 0;
     }
 
-    /* ── Tecnologías (pills de experiencia) ── */
+    /* ── Tecnologías ── */
     .about-tags-row {
         display: flex;
         flex-wrap: wrap;
@@ -1998,7 +2005,7 @@ body {
         padding: 0.4rem 0.9rem;
     }
 
-    /* ── Trayectoria / Experiencia (Línea y punto a la izquierda en móvil) ── */
+    /* ── Trayectoria / Experiencia ── */
     .trajectory-editorial-layout {
         display: grid;
         grid-template-columns: 0px 1fr !important;
@@ -2121,10 +2128,8 @@ body {
         align-items: center !important;
         justify-content: center !important;
         flex-shrink: 0 !important;
-
     }
 
-    /* Imagen dentro del slide adaptada correctamente */
     .proj-card-seamless .carousel-slide img {
         width: 100% !important;
         height: 100% !important;
@@ -2184,40 +2189,129 @@ body {
 
     /* ── Lo que me mueve ── */
     .lo-que-me-mueve-grid {
+        display: flex;
+        flex-direction: column;
         gap: 1.5rem;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+        padding: 0;
+    }
+
+    .lqmm-accordion-stack {
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+    }
+
+    .lqmm-pill-details {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+        padding: 1rem 1.40rem;
+    }
+
+    .lqmm-pill-details summary {
+        font-size: 0.82rem !important;
+        padding: 0rem !important;
+        border-radius: 6px;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0rem !important;
+    }
+
+    .lqmm-sum-left {
+        order: 1 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+    }
+
+    .lqmm-sum-left strong {
+        order: 2 !important;
+        display: block !important;
+        width: 100% !important;
+        font-size: 0.9rem !important;
+        line-height: 1.3 !important;
+        margin-top: 0.2rem !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+    }
+
+    .lqmm-year-tag {
+        font-size: 0.8rem !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+        margin-left: 0rem !important;
+        margin-top: 0.3rem;
+    }
+
+    .lqmm-sum-left .lqmm-year-tag {
+        display: none !important;
+    }
+
+    .lqmm-pill-details summary>.lqmm-year-tag {
+        order: 1 !important;
+        align-self: flex-end !important;
+        font-size: 0.8rem !important;
+    }
+
+    .lqmm-body-content,
+    .accordion-content-inner {
+        padding: 0 0 0.5rem 0 !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
     }
 
     .achievement-row {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.25rem;
-        padding: 1rem 0;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 1rem !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    .achievement-row p {
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+        margin: 0 0rem !important;
+    }
+
+    .achievement-img-container {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        justify-content: center !important;
+        border-radius: 10px !important;
+        overflow: hidden !important;
     }
 
     /* Imagen */
     .achievement-thumb {
-        width: 100%;
+        width: 100% !important;
         height: auto;
-        max-height: 200px;
-        object-fit: cover;
-        order: 2;
+        max-height: 240px;
+        object-fit: contain;
+        display: block !important;
+        margin: 0 !important;
+        border-radius: 10px !important;
     }
 
     .achievement-text-block {
         order: 1;
         width: 100%;
-    }
-
-    /* Detalles (acordeón "Ver más") */
-    .lqmm-pill-details summary {
-        font-size: 0.88rem;
-        padding: 0.4rem 0.8rem;
-        border-radius: 4px;
-    }
-
-    .lqmm-details-content {
-        margin-top: 0.75rem;
-        font-size: 0.85rem;
     }
 
     .lo-que-me-mueve-grid .lqmm-title h2,
@@ -2226,15 +2320,12 @@ body {
         line-height: 1.2;
     }
 
-
-
-    /* Insignia de concurso */
     .contest-badge {
-        font-size: 0.65rem;
-        padding: 0.2rem 0.5rem;
-        margin-left: 0;
-        margin-top: 0.5rem;
-        display: inline-block;
+        order: 1 !important;
+        font-size: 0.6rem !important;
+        padding: 0.2rem 0.4rem !important;
+        margin: 0 !important;
+        display: inline-block !important;
     }
 
     .edu-item h3 {
@@ -2252,7 +2343,7 @@ body {
         grid-column: span 1;
     }
 
-    /* ── Contacto ── */
+    /* ── Contacto  ── */
     .section-dark {
         padding: 4rem 0 3rem 0;
     }
@@ -2260,19 +2351,27 @@ body {
     .contact-interactive-box {
         padding: 1.5rem 1rem;
         border-radius: 10px;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
     }
 
-    .contact-email-link {
-        font-size: 1rem;
-        gap: 0.6rem;
+    .cm-subbox {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        word-break: break-word !important;
     }
 
+    .contact-email-link,
     .cm-sublink {
-        font-size: 0.92rem;
+        font-size: 0.9rem !important;
+        word-break: break-all !important;
+        gap: 0.6rem;
     }
 
     .cm-socials-inline {
         gap: 1.25rem;
+        flex-wrap: wrap !important;
     }
 
     .contact-footer-bar {
