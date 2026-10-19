@@ -1104,11 +1104,16 @@ body {
 }
 
 .contest-badge.bronze {
-    background: #8c6d53;
+    background: #5c6b56;
 }
 
 .contest-badge.team {
     background: #2b438f;
+}
+
+.contest-badge.ingenia {
+    background-color: #8c6d53;
+    color: #ffffff;
 }
 
 .lqmm-year-tag {
